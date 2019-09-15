@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/boring.css" title = "theme" disabled = true>
+    <link rel="stylesheet" href="/css/groovy.css" title = "theme" disabled = true>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/logic.js"></script>
+</head>
+<body>
+    <nav>
+        <h1>Memesite</h1>
+        <div id="user-tool">
+            <button id = "toggle-usertool">Account</button>
+            <div id="user">
+                {{#if userId}}
+
+                    <button id = "logout">Log Out</button>
+                    <button id="toggle-post">Post</button>
+
+                    {{else}}
+                    <input type="text" placeholder = "Username">
+                    <input type="password" placeholder = "Password">
+                    <button id = "sign-in">Sign In</button>
+                    <button id = "sign-up">/Up</button>
+                {{/if}}
+                
+                <p>Color Schemes</p>
+                <hr>
+                <div id="themes">
+                    <button>Boring</button>
+                    <button id = "color-groovy">Groovy</button>
+                </div>
+            </div>    
+        </div>
+        
+        <div id="navbuttons">
+            <a href = "/">Home</a>
+            <a href = "/dash">Dashboard</a>
+            <a href = "/faq">FAQ</a>
+        </div>
+    </nav>
+
+    <div id="user-toggle-box"></div>
+
+    {{#if userId}}
+    <div id="post-box">
+        <p>Create a Post</p>
+        <input type="text" placeholder = "Title">
+        <br>
+        
+        <textarea name="" id="post-body" cols="30" rows="10" placeholder = "Body (optional)"></textarea>
+        <br>
+        <input name = "img-uploader" type="file" id = "file" class = "inputfile">
+        <label for="file">Upload Image</label>
+
+        <br>
+        <input type="text" placeholder = "Genre">
+        <input type="text" placeholder = "Tag..." maxlength = "15">
+        <button id = "submit-post">Submit</button>
+        <button class = "close-modal">X</button>
+    </div>
+    {{/if}}
+
+    <div id="sidebar">
+
+    </div>
+ 
+    {{{body}}}
+    
+</body>
+</html>

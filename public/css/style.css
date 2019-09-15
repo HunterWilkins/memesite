@@ -1,0 +1,313 @@
+* {
+    box-sizing:border-box;
+    outline: none;
+    transition: background .15s, color .15s;
+}
+
+body {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1 {
+    font-size:30px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+a {
+    text-decoration:none;
+}
+
+nav {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:35px;
+    background:black;
+    color:white;
+    padding: 0 15px;
+    z-index: 10;
+}
+
+nav > * {
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+#user-tool {
+    right: 15px;
+    width: 100px;
+    height: 30px;
+    text-align:center;
+}
+
+#toggle-usertool {
+    height: 100%;
+}
+
+#user {
+    transform: none;
+    top: 35px;
+    right: -365px;
+    position: fixed;
+    padding: 10px;
+    width: 350px;
+    transition: right .15s;
+    color: black;
+    z-index: 5;
+}
+
+#user p {
+    padding-top: 5px;
+}
+
+#user input {
+    padding-left: 5px;
+    height: 25px;
+    width: 33%;
+}
+
+#user-toggle-box {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 5;
+}
+
+#sign-in, #sign-up {
+    height: 25px;
+}
+
+#sign-in{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#sign-up{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#navbuttons {
+    position:absolute;
+    right: 115px;
+}
+
+#themes button {
+    padding: 5px 10px;
+}
+
+#color-groovy {
+    color: rgb(240, 255, 206);
+    background: rgb(21, 57, 36);
+    border-radius: 25px;
+    border: rgb(240, 255, 206) solid 2px;
+}
+
+#sidebar {
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    width: 150px;
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 150px;
+    right: 0;
+    padding: 10px;
+}
+
+#frontpage {
+    text-align:center;
+}
+
+.post {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height:75px;
+    padding: 5px;
+}
+
+.thumbnail, .info {
+    position: absolute;
+}
+
+.thumbnail {
+    transform: translateY(-50%);
+    top: 50%;
+    left: 5px;
+    width: 65px;
+    height: 65px;
+    background: white;
+}
+
+.info {
+    top: 5px;
+    left: 75px;
+    right: 5px;
+    bottom: 5px;
+    text-align:left;
+}
+
+.title {
+    font-size: 17px;
+}
+
+.score {
+    position: absolute;
+    font-size: 20px;
+    text-align: right;
+    right: 5px;
+    bottom: 0px;
+}
+
+.impression {
+    position: absolute;
+    font-size: 18px;
+    text-align: right;
+    right: 5px;
+    top: 0px;
+}
+
+.genre {
+    position: absolute;
+    bottom: 0;
+    font-style: italic;
+}
+
+/* Posting Box */
+
+#post-box {
+    display: none;
+    position: fixed;
+    padding: 15px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    z-index: 10;
+    text-align:center;
+}
+
+#post-box >* {
+    margin: 5px;
+    display: inline-block;
+}
+
+#post-box textarea, input, #submit-post, #post-box p {
+    padding: 10px;
+    width: 75%;
+}
+
+#post-box textarea {
+    max-width: 75%;
+    min-width: 200px;
+    height: 200px;
+}
+
+input[name=img-uploader]{
+    opacity:0;
+    position:absolute;
+}
+
+label[for=file] {
+    cursor:pointer;
+}
+
+.close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+}
+
+/* Single Post Specific Layout */
+#post-view {
+    width: 100%;
+}
+
+#post-view header {
+    position:relative;
+    display:block;
+}
+
+#post-title {
+    margin: 0;
+}
+
+#post-view section {
+    position: relative;
+}
+
+#post-score {
+    position: absolute;
+    right:5px;
+    bottom: 0;
+}
+
+#post-impression {
+    font-style: italic;
+}
+
+#post-author, #post-impression {
+    opacity: .75;
+}
+
+
+#post-body, #comments {
+    margin: 0 auto;
+    max-width: 500px;
+    line-height: 1.5em;
+}
+
+#post-genre {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#response {
+    text-align:center;
+    font-style: italic;
+    padding: 10px;
+}
+
+#comments textarea {
+    width: 100%;
+}
+
+#submit-comment {
+    width: 100%;
+    padding: 5px;
+}
+
+
+
+
+

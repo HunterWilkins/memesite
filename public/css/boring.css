@@ -1,0 +1,35 @@
+body {
+    background: rgb(231, 231, 231);
+    color: black;
+}
+
+nav {
+    color: white;
+    background: rgb(106, 137, 147);
+}
+
+
+nav a {
+    padding: 5px;
+    color: inherit;
+}
+
+#user {
+    background: rgb(106, 137, 147);
+    color:white;
+    border: white dotted 1px;
+}
+
+#sidebar {
+    background: white;
+    border-right: rgb(106, 137, 147) dashed 2px;
+}
+
+.post {
+    background: white;
+    border: rgb(106, 137, 147) solid 2px;
+}
+
+.author {
+    color: rgb(130, 130, 130);
+}
