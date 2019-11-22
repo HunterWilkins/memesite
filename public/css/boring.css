@@ -15,14 +15,22 @@ nav a {
 }
 
 #user {
-    background: rgb(106, 137, 147);
+    /* background: rgb(106, 137, 147); */
     color:white;
     border: white dotted 1px;
 }
 
 #sidebar {
-    background: white;
-    border-right: rgb(106, 137, 147) dashed 2px;
+    background:  rgb(106, 137, 147);
+    border-left: white dashed 2px;
+}
+
+#post-box {
+    background: rgb(143, 186, 197);
+}
+
+#post-box p {
+    font-size: 20px;
 }
 
 .post {

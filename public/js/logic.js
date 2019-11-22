@@ -7,6 +7,10 @@ $(document).ready(function(){
 
     let postQty = 0;
 
+    $.getJSON("/currentUser", function(data) {
+        console.log(data);
+    });
+
     $.getJSON("/all/posts", function(data){
         data.forEach(function(){
             postQty += 1;
@@ -121,6 +125,6 @@ $(document).ready(function(){
                 id: (postQty + 1 ).toString()
             }
         })
-    })
+    });
     
 });

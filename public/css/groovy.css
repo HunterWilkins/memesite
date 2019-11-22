@@ -44,11 +44,11 @@ nav a {
 }
 
 #user {
-    border: var(--border);
+    /* border: var(--border);
     border-color:rgba(240, 255, 206, .50);
     border-style: dashed;
     background: rgb(32, 81, 43);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow); */
 }
 
 #user input {

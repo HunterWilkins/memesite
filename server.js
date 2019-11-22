@@ -17,14 +17,13 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     store: new MongoStore({mongooseConnection: mongoose.connection}),
-
 }));
 
 const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
-mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true , useUnifiedTopology: true });
 
 // Routes
 require("./routes/apiRoutes")(app);

@@ -2,6 +2,14 @@ module.exports = function(app) {
     const bcrypt = require("bcryptjs");
     let db = require("../models");
 
+    app.get("/currentUser", function(req, res) {
+        db.User.find({
+            id: req.session.userId
+        }).then(function(dbUser) {
+            res.json(dbUser);
+        }).catch(err => console.log(err));
+    })
+
     app.get("/all/posts", function(req, res){
         db.Post.find({})
         .then(function(dbUser) {

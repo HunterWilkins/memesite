@@ -21,29 +21,7 @@
 <body>
     <nav>
         <h1>Memesite</h1>
-        <div id="user-tool">
-            <button id = "toggle-usertool">Account</button>
-            <div id="user">
-                {{#if userId}}
-
-                    <button id = "logout">Log Out</button>
-                    <button id="toggle-post">Post</button>
-
-                    {{else}}
-                    <input type="text" placeholder = "Username">
-                    <input type="password" placeholder = "Password">
-                    <button id = "sign-in">Sign In</button>
-                    <button id = "sign-up">/Up</button>
-                {{/if}}
-                
-                <p>Color Schemes</p>
-                <hr>
-                <div id="themes">
-                    <button>Boring</button>
-                    <button id = "color-groovy">Groovy</button>
-                </div>
-            </div>    
-        </div>
+       
         
         <div id="navbuttons">
             <a href = "/">Home</a>
@@ -74,7 +52,30 @@
     {{/if}}
 
     <div id="sidebar">
+         <div id="user-tool">
+            <button id = "toggle-usertool">Account</button> 
+        </div>
 
+        <div id="user">
+            {{#if userId}}
+
+                <button id = "logout">Log Out</button>
+                <button id="toggle-post">Post</button>
+ 
+                {{else}}
+                <input type="text" placeholder = "Username">
+                <input type="password" placeholder = "Password">
+                <button id = "sign-in">Sign In</button>
+                <button id = "sign-up">/Up</button>
+            {{/if}}
+            
+            <p>Color Schemes</p>
+            <hr>
+            <div id="themes">
+                <button>Boring</button>
+                <button id = "color-groovy">Groovy</button>
+            </div>
+        </div> 
     </div>
  
     {{{body}}}
