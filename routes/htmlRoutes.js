@@ -8,7 +8,10 @@ const users = [
 module.exports = function(app) {
     app.get("/", function(req, res) {
         console.log(req.session);
-        res.render("landing", {userId: req.session.userId});
+        if (req.session) {
+            res.render("landing", {userId: req.session.userId});
+        }
+        else res.render("landing");
     });
 
     app.get("/post/:id", function(req, res){
