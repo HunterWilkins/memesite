@@ -7,7 +7,7 @@ module.exports = function(app) {
             id: req.session.userId
         }).then(function(dbUser) {
             res.json(dbUser);
-        }).catch(err => console.log(err));
+        }).catch(function(err) {console.log(err)});
     })
 
     app.get("/all/posts", function(req, res){
